@@ -1,0 +1,27 @@
+.marquee {
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    height: 40px;
+}
+
+.marquee--inner {
+    display: block;
+    width: 200%;
+    margin: 10px 0 0;
+    position: absolute;
+    animation: marquee 20s linear infinite;
+    ul {
+        float: left;
+        width: 50%;
+    }
+}
+
+.marquee--inner:hover {
+    //animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
