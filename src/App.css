@@ -60,7 +60,6 @@ body {
     }
     .hamburger-menu-icon {
       display: block;
-      margin-right: 15px;
       svg {
         position: relative;
         top: 3px;
