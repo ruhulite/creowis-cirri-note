@@ -1,7 +1,7 @@
 
 const About = () => {
     return (
-        <section id="about" className="flex flex-col items-center justify-center w-full bg-[#444444] py-57 text-center">
+        <section id="about" className="flex flex-col items-center justify-center w-full bg-[#444444] md:py-57 text-center">
             <h2 className="text-[48px] leading-[52.8px] mb-[50px]">An extraordinary note <br /> for <span className="text-[#00bb77]">makers, creators..</span></h2>
             <div className="mb-[50px]">
                 <svg

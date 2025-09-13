@@ -1,9 +1,16 @@
-import '../assets/TryNow.pcss'
+import '../assets/css/TryNow.pcss'
 
 const TryNow = () => {
+
+    const handleClick = () => {
+        const menuElement = document.getElementById('navigation');
+        menuElement.classList.toggle('active');
+    }
+
     return (
-        <div className="try-now cursor-pointer w-[167px] h-[56px] relative bg-white rounded-[25px] p-2]">
-            <span className="cart absolute left-[2px] top-[2px] bg-black rounded-[25px] flex items-center h-[52px] w-[52px]">
+        <div className="flex">
+            <div className="try-now cursor-pointer md:w-[167px] md:h-[56px] relative bg-white rounded-[25px] p-2]">
+            <span className="cart absolute left-[2px] top-[2px] bg-black rounded-[25px] flex items-center md:h-[52px] md:w-[52px]">
                 <svg
                     width={24}
                     height={25}
@@ -17,8 +24,24 @@ const TryNow = () => {
                   />
                 </svg>
             </span>
-            <span className="try-now-text text-lg text-black font-medium absolute right-[30px] top-[12px]">Try Now</span>
-        </div>
+                <span className="try-now-text text-lg text-black font-medium absolute right-[30px] top-[12px]">Try Now</span>
+            </div>
+            <div className="hamburger-menu-icon">
+                <svg
+                    onClick={handleClick}
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M4 18C3.71667 18 3.47934 17.904 3.288 17.712C3.09667 17.52 3.00067 17.2827 3 17C2.99934 16.7173 3.09534 16.48 3.288 16.288C3.48067 16.096 3.718 16 4 16H20C20.2833 16 20.521 16.096 20.713 16.288C20.905 16.48 21.0007 16.7173 21 17C20.9993 17.2827 20.9033 17.5203 20.712 17.713C20.5207 17.9057 20.2833 18.0013 20 18H4ZM4 13C3.71667 13 3.47934 12.904 3.288 12.712C3.09667 12.52 3.00067 12.2827 3 12C2.99934 11.7173 3.09534 11.48 3.288 11.288C3.48067 11.096 3.718 11 4 11H20C20.2833 11 20.521 11.096 20.713 11.288C20.905 11.48 21.0007 11.7173 21 12C20.9993 12.2827 20.9033 12.5203 20.712 12.713C20.5207 12.9057 20.2833 13.0013 20 13H4ZM4 8C3.71667 8 3.47934 7.904 3.288 7.712C3.09667 7.52 3.00067 7.28267 3 7C2.99934 6.71733 3.09534 6.48 3.288 6.288C3.48067 6.096 3.718 6 4 6H20C20.2833 6 20.521 6.096 20.713 6.288C20.905 6.48 21.0007 6.71733 21 7C20.9993 7.28267 20.9033 7.52033 20.712 7.713C20.5207 7.90567 20.2833 8.00133 20 8H4Z"
+                        fill="white"
+                        fillOpacity="0.5"
+                    />
+                </svg>
+            </div></div>
     );
 };
 

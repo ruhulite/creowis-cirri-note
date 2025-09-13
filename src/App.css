@@ -28,3 +28,196 @@ body {
     bottom: 190px;
   }
 }
+
+#header {
+  .hamburger-menu-icon {
+    display: none;
+  }
+}
+
+#features {
+  .text-box-sm {
+    display: none;
+  }
+}
+
+@media all and (max-width: 390px) {
+  .wrapper {
+    max-width: 390px;
+    width: 390px;
+    overflow: hidden;
+  }
+  #topBar {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  }
+
+  #header {
+    padding: 10px 15px;
+    &.is-sticky-header {
+      position: fixed;
+    }
+    .hamburger-menu-icon {
+      display: block;
+      svg {
+        position: relative;
+        top: 3px;
+        margin-left: 16px;
+      }
+    }
+    .logo {
+      svg {
+        max-width: 100px;
+      }
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.90);
+      top: 64px;
+      right: -100%;
+      transition: all 0.2s ease;
+      z-index: 1;
+      height: calc(100vh - 64px);
+      ul {
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 10px 0;
+        li {
+          padding: 30px;
+        }
+      }
+      &.active {
+        right: 0;
+      }
+    }
+    .try-now {
+      width: 107px;
+      height: 32px;
+      .try-now-text {
+        font-size: 14px;
+        line-height: 19px;
+        top: 6px;
+        right: 16px;
+      }
+      .cart {
+        width: 28px;
+        height: 28px;
+        padding-left: 5px;
+        svg {
+          max-width: 18px;
+        }
+      }
+      &:hover {
+        width: 167px;
+        height: 56px;
+        .cart {
+          width: 97%;
+          height: 52px;
+          padding-left: 14px;
+          svg {
+            max-width: 24px;
+          }
+        }
+        .try-now-text {
+          font-size: 1.125rem;
+          top: 18px;
+          right: 30px;
+        }
+      }
+    }
+  }
+
+  #banner {
+    > svg {
+      max-height: 650px;
+      position: relative;
+      left: -100px;
+    }
+    > div {
+      .text-span {
+        top: 60px;
+        left: 50px;
+        font-size: 48px;
+        line-height: 52px;
+        &.last {
+          top: 110px;
+        }
+      }
+      span {
+        img {
+          position: relative;
+          top: 100px;
+          right: -120px;
+          width: 576px;
+          max-width: 2000px;
+        }
+      }
+    }
+  }
+
+  #about {
+    padding: 80px 15px;
+    h2 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  #features {
+    padding: 80px 15px;
+    h2 {
+      font-size: 48px;
+      line-height: 52px;
+    }
+    > p {
+      br {
+        display: none;
+      }
+    }
+    .feature-wrap {
+      overflow-x: overlay;
+      margin-top: 40px;
+      > div {
+        display: inline-block;
+        margin-right: 15px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      .box {
+        width: 280px;
+        height: 260px;
+        &:hover {
+          .arrow {
+            left: 180px;
+            bottom: 150px;
+          }
+        }
+      }
+      .text-box-lg {
+        display: none;
+      }
+    }
+    .text-box-sm {
+      display: block;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  #footer {
+    > div {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .logo {
+        margin-bottom: 30px;
+      }
+      p:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

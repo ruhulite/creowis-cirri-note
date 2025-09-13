@@ -1,4 +1,4 @@
-import '../../assets/TopBar.pcss'
+import '../../assets/css/TopBar.pcss'
 import TopBarList from "./TopBarList.jsx";
 
 const TopBar = () => {

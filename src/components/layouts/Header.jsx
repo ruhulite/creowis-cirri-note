@@ -46,6 +46,8 @@ const Header = () => {
 
     const handleClick = (val) => {
         const element = document.getElementById(val);
+        const menuElement = document.getElementById('navigation');
+        menuElement.classList.remove('active');
         element.scrollIntoView({
             behavior: 'smooth',
             block: 'nearest'
@@ -54,10 +56,11 @@ const Header = () => {
 
     return (
         <header
-            className={`bg-black flex justify-between items-center px-[40px] py-[24px] ${isSticky ? 'is-sticky-header' : ''}`}>
+            id="header"
+            className={`bg-black flex justify-between items-center md:px-[40px] md:py-[24px] ${isSticky ? 'is-sticky-header' : ''}`}>
             <Logo />
-            <nav>
-                <ul className="flex justify-center items-center">
+            <nav id="navigation">
+                <ul className="flex md:justify-center md:items-center">
                     {navs.map((nav, index) => (
                         <li
                             className="px-6 cursor-pointer"
